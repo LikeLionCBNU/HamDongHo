@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Ho '_'</title>
+    <style>
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+  
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+          #Clock{
+              color: white;
+          }
+        }
+      </style>
+      <script>
+          function clock_test() {
+              var data = new Date()
+              var Clock = document.getElementById("Clock")
+              var msg = "현재시간 " + data.getHours()+"시 "
+              msg += data.getMinutes()+"분 "
+              msg += data.getSeconds()+"초"
+
+              Clock.innerText =msg
+
+              setTimeout(clock_test, 1000)
+          }
+      </script>
+</head>
+<body onload="clock_test()">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" target="_blank" href="https://likelion.net/">Like Lion</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="http://127.0.0.1:5500/Homework2.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Link</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a class="dropdown-item" target="_blank" href="https://www.google.com/">Google</a>
+                <a class="dropdown-item" target="_blank" href="https://www.naver.com/">Naver</a>
+                <a class="dropdown-item" target="_blank" href="https://www.chungbuk.ac.kr/">CBNU</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div id = "Clock" class = "clock"></div> &nbsp; &nbsp; &nbsp;
+        <form>
+            <div class="form-row align-items-right">
+              <div class="col-auto">
+                <label class="sr-only" for="inlineFormInput">아이디</label>
+                <input type="text" class="form-control mb-2" id="inlineFormInput" placeholder="아이디" required>
+              </div>
+              <div class="col-auto">
+                <label class="sr-only" for="inlineFormInputGroup">이메일</label>
+                <div class="input-group mb-2">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text">@</div>
+                  </div>
+                  <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="이메일" required>
+                </div>
+              </div>
+              <div class="col-auto">
+                <button type="submit" class="btn btn-primary mb-2">로그인</button>
+              </div>
+            </div>
+          </form>
+     </nav>
+        <div class="jumbotron">
+          <div class="container">
+            <h1 class="display-3">Hello, DongHo's page!</h1>
+            <hr color="gray">
+            <p>안녕하세요. 멋쟁이 사자처럼 8기 함동호입니다. 서울거주하고 나이는 27살 충북대학교 도시공학과를 전공하고 정보통신공학부를 복수전공하고 있습니다. </p>
+            <p>CSS는 너무너무 싫고 귀찮고 부트스트랩은 너무 어려워,, 이거 만드는 것도 굉장히 힘들다. 웹페이지 만드는건 언제 해두 너무너무 어렵다.</p>
+            <br>
+            <P>아래는 <Strong>BootStrap</Strong>으로 가는 링크입니다. 누가 들어가서 나 좀 알려주세요.</P>
+            <p><a class="btn btn-primary btn-lg" href="https://getbootstrap.com/" role="button">BootStrap &raquo;</a></p>
+          </div>
+        </div>
+        <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <h2>취미</h2>
+                <ul>
+                    <li>Sleep: Sleeping is the best thing in the world.</li>
+                    <p><a class="btn btn-secondary" target="_blank" href="https://www.k-health.com/news/articleView.html?idxno=43637" role="button">View details &raquo;</a></p>
+                    <li>Exercise: Exercise always makes your body healthy.</li>
+                    <p><a class="btn btn-secondary" target="_blank" href="https://brunch.co.kr/@pusyap/198" role="button">View details &raquo;</a></p>
+                    <li>Reading a book: I often read high-tech studies frequently, and sometimes I read a novels.</li>
+                    <p><a class="btn btn-secondary" target="_blank" href="https://bonlivre.tistory.com/344" role="button">View details &raquo;</a></p>
+                    <li>Be challenged: 
+                        Honestly, because of the damn urban engineering and challenges.</li>
+                        <p><a class="btn btn-secondary" target="_blank" href="https://ko.dict.naver.com/seo.nhn?id=9872000" role="button">View details &raquo;</a></p>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <h2>학력</h2>
+                <ul>
+                    <li>Elementary school : 3학년까지 서울신묵초!! 4학년부터는 서울삼성초!! 5학년때 전교부회장도 해봄!!</li>
+                    <br>
+                    <li>Middle school: 서울삼성중!! </li>
+                    <br>
+                    <li>High school: 서울용산고!! 규제가 심해서 3년 내내 빡빡이였음!!</li>
+                    <br>
+                    <li>University: 충북대!! 6년째 다니는중!! 지금은 Net&DB연구실에 있음!!</li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <h2>일정</h2>
+                <ol>
+                    <li class="class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"> 5월</li>
+                    <p class="collapse multi-collapse" id="multiCollapseExample1">
+                        1. 정보통신공학부 졸업작품 완성 <br>
+                        2. 멋쟁이 사자처럼 열심히 참여하기 <br>
+                        3. 도시공학에 너무 시간뺏기지 않고 졸업요건 맞추기<br>
+                        4. 정보처리기사 실기 합격해서 취득하기
+                    </p>
+                    <br>
+                    <li class="class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"> 6월 </li>
+                    <p class="collapse multi-collapse" id="multiCollapseExample2">
+                        1. 정보통신공학부 졸업작품 통과 <br>
+                        2. SQLD합격하기 <br>
+                        3. ADsP합격하기<br>
+                        4. 한국사 취득하기
+                    </p>
+                    <br>
+                    <li class="class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample3" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"> 7월 </li>
+                    <p class="collapse multi-collapse" id="multiCollapseExample3">
+                        1. 테셋 우수 취득 <br>
+                        2. 개발공부 열심히하기 <br>
+                        3. 알고리즘 공부 열심히 하기<br>
+                        4. 멋쟁이 사자처럼 열심히 참여하기
+                    </p>
+                    <br>
+                    <li class="class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"> 8월 </li>
+                    <p class="collapse multi-collapse" id="multiCollapseExample4">
+                        1. 졸업하기!! <br>
+                        2. 멋쟁이 사자처럼 열심히 참여하기
+                    </p>
+                    <br>
+                    <li class="class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample5" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"> 9월 </li>
+                    <p class="collapse multi-collapse" id="multiCollapseExample5">
+                        1. 멋쟁이 사자처럼 열심히 참여하기
+                    </p>
+                    <br>
+                    <li class="class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample6" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"> 10월 </li>
+                    <p class="collapse multi-collapse" id="multiCollapseExample6">
+                        1. 멋쟁이 사자처럼 열심히 참여하기
+                    </p>
+                    <br>
+                </ol>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <footer class="container">
+  <p>&copy; Ho 2020-05-16</p>
+</footer>
+</body>
+</html>
