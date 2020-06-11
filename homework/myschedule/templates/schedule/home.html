@@ -1,0 +1,15 @@
+<head>
+  <title>이것은 홈페이지!</title>
+</head>
+<body>
+  <h1><strong>Homework는 바로 해야지</strong></h1>
+  <hr color="black" />
+  {% for i in sch.all %}
+  <div>
+    <h2>{{i.title}}</h2>
+    <hr color="gray" />
+    <p>{{i.memo}}</p>
+    <p>{{i.published_data}}</p>
+  </div>
+  {% endfor %}
+</body>
