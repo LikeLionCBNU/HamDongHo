@@ -20,4 +20,5 @@ import myschedule
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('schedule/', include('myschedule.urls')),
+    
 ]

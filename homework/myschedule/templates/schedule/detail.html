@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>안녕 나는 디테일이야!</h1>
+    <div>
+      <h2>{{post.title}}</h2>
+      <p>{{post.created_date}}</p>
+      <p>{{post.text}}</p>
+      <a href="{% url 'home' %}">홈으로 가랏</a>
+      <a href="{% url 'edit' post.id %}">누르면 수정됨</a>
+      <a href="{% url 'delete' post.id %}">누르면 삭제됨</a>
+    </div>
+  </body>
+</html>
