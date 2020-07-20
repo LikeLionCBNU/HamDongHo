@@ -18,6 +18,7 @@ def post_new(request):
         form = PostForm(request.POST)
         if form.is_valid():
             post = form.save(commit=False)
+            post.writer = request.user
             post.save()
             return redirect('detail', id=post.pk)
     else:
@@ -48,12 +49,13 @@ def comment_new(request, id):
         if form.is_valid():
             comment = form.save(commit=False)
             comment.post = get_object_or_404(Post, pk=id)
+            comment.writer = request.user
             comment.save()
             return redirect('detail', id=id)
     else:
         return redirect('index')
 
 def comment_delete(request, id):
-    comment = get_object_or_404(Post, pk=id)
+    comment = get_object_or_404(Comment, pk=id)
     comment.delete()
-    return redirect('detail', id=post.pk)
+    return redirect('index')

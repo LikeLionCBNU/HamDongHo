@@ -23,5 +23,5 @@
 {% for comment in post.comment_set.all %}
 <h4>{{comment.content}}</h4>
 <h6>작성자 : {{comment.writer}}</h6>
-<a href="{% url 'comment_delete' post.pk %}">삭제</a>
+<a href="{% url 'comment_delete' comment.pk %}">삭제</a>
 {% endfor %}
