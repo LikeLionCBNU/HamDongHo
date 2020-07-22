@@ -8,8 +8,10 @@
 <!-- 참고 https://ssungkang.tistory.com/entry/DjangoDate%EC%99%80-Time%EC%9D%84-%EB%82%98%ED%83%80%EB%82%B4%EB%8A%94-template-filter -->
 <div>수정시간 : {{post.updated_at}}</div>
 <div>
+  {% if post.writer == user %}
   <a href="{% url 'post_edit' post.pk %}">수정</a>
   <a href="{% url 'post_delete' post.pk %}">삭제</a>
+  {% endif %}
 </div>
 <div style="padding-top: 50px;">
   {{post.content}}
@@ -23,5 +25,6 @@
 {% for comment in post.comment_set.all %}
 <h4>{{comment.content}}</h4>
 <h6>작성자 : {{comment.writer}}</h6>
+{% if comment.writer == user %}
 <a href="{% url 'comment_delete' comment.pk %}">삭제</a>
-{% endfor %}
+{% endif %} {% endfor %}
